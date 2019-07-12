@@ -301,4 +301,133 @@ WHERE unit_price < 10.00
 DELETE   
 FROM customers  
 WHERE customer_id = '15'  
+~~~
 
+# Data Normalization
+
+<details><summary>Original Data</summary>
+
+<p>
+
+Data Table
+
+| First name | Last Name | Full Name     | email                  | company name      | company tax id |
+|------------|-----------|---------------|-------------------------------------------------------------|
+| John       | Mitchell  | John Mitchell | john@lambdaschool.com, | Lambda School     | 99-999999      | 
+|            |           |               | jrmmba@outlook.com,    |                   |                |
+|            |           |               | jrmmba8314@gmail.com   |                   |                |
+| Steve      | Green     | Steve Green   | steve@email.local      | Home              | 88-888888      |
+| Amy        | Found     | Amy Found     | amy@email.local        | A Perfect Company | 77-777777      |
+|            |           |               | afound@home.email      |                   |                |    
+
+</p>
+</details>
+
+
+
+<details><summary>1NF - Email broken into separate rows</summary>
+<p>
+
+Person Table
+
+| Person Id  |First name | Last Name | Full Name     |  company name      | company tax id |
+|------------|-----------|-----------|---------------|-------------------------------------|
+| 1          | John      | Mitchell  | John Mitchell |  Lambda School     | 99-999999      | 
+| 2          | Steve     | Green     | Steve Green   |  Home              | 88-888888      |
+| 3          | Amy       | Found     | Amy Found     |  A Perfect Company | 77-777777      |
+
+
+
+Email Table
+
+| Email id | Person id | email                 |
+|----------|-----------|-----------------------|
+| 1        | 1         | john@lambdaschool.com |
+| 2        | 1         | jrmmba@outlook.com    |
+| 3        | 1         | jrmmba8314@gmail.com  |
+| 4        | 2         | steve@email.local     |
+| 5        | 3         | amy@email.local       |
+| 6        | 3         | afound@home.email     |
+
+
+
+</p>
+</details>
+
+
+<details><summary>2NF - Company Tax Id is moved to company table</summary>
+<p>
+
+Person Table
+
+| Person Id  |First name | Last Name | Full Name     |  company id |
+|------------|-----------|-----------|---------------|-------------|
+| 1          | John      | Mitchell  | John Mitchell |  1          | 
+| 2          | Steve     | Green     | Steve Green   |  2          |
+| 3          | Amy       | Found     | Amy Found     |  3          |
+
+
+
+Company Table
+
+| Company Id | Company Name      | Company Tax Id |
+|------------|-------------------|----------------|
+| 1          | Lambda School     | 99-999999      |
+| 2          | Home              | 88-888888      |
+| 3          | A Perfect Company | 77-777777      |
+
+
+
+Email Table
+
+| Email id | Person id | email                 |
+|----------|-----------|-----------------------|
+| 1        | 1         | john@lambdaschool.com |
+| 2        | 1         | jrmmba@outlook.com    |
+| 3        | 1         | jrmmba8314@gmail.com  |
+| 4        | 2         | steve@email.local     |
+| 5        | 3         | amy@email.local       |
+| 6        | 3         | afound@home.email     |
+
+
+
+</p>
+</details>
+
+<details><summary>3NF - Derived column Full Name is removed</summary>
+<p>
+
+Person Table
+
+| Person Id  |First name | Last Name | company id |
+|------------|-----------|-----------|------------|
+| 1          | John      | Mitchell  | 1          | 
+| 2          | Steve     | Green     | 2          |
+| 3          | Amy       | Found     | 3          |
+
+
+
+Company Table
+
+| Company Id | Company Name      | Company Tax Id |
+|------------|-------------------|----------------|
+| 1          | Lambda School     | 99-999999      |
+| 2          | Home              | 88-888888      |
+| 3          | A Perfect Company | 77-777777      |
+
+
+
+Email Table
+
+| Email id | Person id | email                 |
+|----------|-----------|-----------------------|
+| 1        | 1         | john@lambdaschool.com |
+| 2        | 1         | jrmmba@outlook.com    |
+| 3        | 1         | jrmmba8314@gmail.com  |
+| 4        | 2         | steve@email.local     |
+| 5        | 3         | amy@email.local       |
+| 6        | 3         | afound@home.email     |
+
+
+</p>
+</details>
