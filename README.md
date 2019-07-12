@@ -312,7 +312,7 @@ WHERE customer_id = '15'
 Data Table
 
 | First name | Last Name | Full Name     | email                  | company name      | company tax id |
-|------------|-----------|---------------|-------------------------------------------------------------|
+|------------|-----------|---------------|------------------------|-------------------|----------------|
 | John       | Mitchell  | John Mitchell | john@lambdaschool.com, | Lambda School     | 99-999999      | 
 |            |           |               | jrmmba@outlook.com,    |                   |                |
 |            |           |               | jrmmba8314@gmail.com   |                   |                |
@@ -331,7 +331,7 @@ Data Table
 Person Table
 
 | Person Id  |First name | Last Name | Full Name     |  company name      | company tax id |
-|------------|-----------|-----------|---------------|-------------------------------------|
+|------------|-----------|-----------|---------------|--------------------|----------------|
 | 1          | John      | Mitchell  | John Mitchell |  Lambda School     | 99-999999      | 
 | 2          | Steve     | Green     | Steve Green   |  Home              | 88-888888      |
 | 3          | Amy       | Found     | Amy Found     |  A Perfect Company | 77-777777      |
