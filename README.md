@@ -1,8 +1,8 @@
 # java-rdbms
 
-## SQL
-## RDBMS
-## PostgreSQL
+* SQL
+* RDBMS
+* PostgreSQL
 
 # Introduction
 
