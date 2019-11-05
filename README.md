@@ -415,11 +415,12 @@ Email Table
 
 Person Table
 
-| Person Id  |First name | Last Name | company id |
-|------------|-----------|-----------|------------|
-| 1          | John      | Mitchell  | 1          | 
-| 2          | Steve     | Green     | 2          |
-| 3          | Amy       | Found     | 3          |
+| Person Id  |First name | Last Name |
+|------------|-----------|-----------|
+| 1          | John      | Mitchell  |
+| 2          | Steve     | Green     |
+| 3          | Amy       | Found     |
+| 4          | BarnBarn  | Rabbit    |
 
 
 PersonCompany Table
