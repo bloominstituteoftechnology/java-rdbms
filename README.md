@@ -365,11 +365,12 @@ Email Table
 
 Person Table
 
-| Person Id  |First name | Last Name | Full Name     |  company id |
-|------------|-----------|-----------|---------------|-------------|
-| 1          | John      | Mitchell  | John Mitchell |  1          | 
-| 2          | Steve     | Green     | Steve Green   |  2          |
-| 3          | Amy       | Found     | Amy Found     |  3          |
+| Person Id  |First name | Last Name | Full Name      | 
+|------------|-----------|-----------|----------------|
+| 1          | John      | Mitchell  | John Mitchell  |  
+| 2          | Steve     | Green     | Steve Green    |  
+| 3          | Amy       | Found     | Amy Found      |  
+| 4          | BarnBarn  | Rabbit    | BarnBarn Rabbit| 
 
 
 PersonCompany Table
