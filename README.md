@@ -311,14 +311,16 @@ WHERE customer_id = '15'
 
 Data Table
 
-| First name | Last Name | Full Name     | email                  | company name      | company tax id |
-|------------|-----------|---------------|------------------------|-------------------|----------------|
-| John       | Mitchell  | John Mitchell | john@lambdaschool.com, | Lambda School     | 99-999999      | 
-|            |           |               | jrmmba@outlook.com,    |                   |                |
-|            |           |               | jrmmba8314@gmail.com   |                   |                |
-| Steve      | Green     | Steve Green   | steve@email.local      | Home              | 88-888888      |
-| Amy        | Found     | Amy Found     | amy@email.local        | A Perfect Company | 77-777777      |
-|            |           |               | afound@home.email      |                   |                |    
+| First name | Last Name | Full Name       | email                  | company name      | company tax id |
+|------------|-----------|-----------------|------------------------|-------------------|----------------|
+| John       | Mitchell  | John Mitchell   | john@lambdaschool.com, | Lambda School     | 99-999999      | 
+|            |           |                 | jrmmba@outlook.com,    |                   |                |
+|            |           |                 | jrmmba8314@gmail.com   |                   |                |
+| Steve      | Green     | Steve Green     | steve@email.local      | Home              | 88-888888      |
+| Amy        | Found     | Amy Found       | amy@email.local        | A Perfect Company | 77-777777      |
+|            |           |                 | afound@home.email      |                   |                |  
+| BarnBarn   | Rabbit    | BarnBarn Rabbit | barnbarn@hops.local    | Lambda School     | 99-999999      |
+|            |           |                 |                        | Home              | 88-888888      |
 
 </p>
 </details>
@@ -330,11 +332,13 @@ Data Table
 
 Person Table
 
-| Person Id  |First name | Last Name | Full Name     |  company name      | company tax id |
-|------------|-----------|-----------|---------------|--------------------|----------------|
-| 1          | John      | Mitchell  | John Mitchell |  Lambda School     | 99-999999      | 
-| 2          | Steve     | Green     | Steve Green   |  Home              | 88-888888      |
-| 3          | Amy       | Found     | Amy Found     |  A Perfect Company | 77-777777      |
+| Person Id  |First name | Last Name | Full Name       |  company name      | company tax id |
+|------------|-----------|-----------|-----------------|--------------------|----------------|
+| 1          | John      | Mitchell  | John Mitchell   |  Lambda School     | 99-999999      | 
+| 2          | Steve     | Green     | Steve Green     |  Home              | 88-888888      |
+| 3          | Amy       | Found     | Amy Found       |  A Perfect Company | 77-777777      |
+| 4          | BarnBarn  | Rabbit    | BarnBarn Rabbit |  Lambda School     | 99-999999      |
+|            |           |           |                 |  Home              | 88-888888      |
 
 
 
@@ -348,6 +352,7 @@ Email Table
 | 4        | 2         | steve@email.local     |
 | 5        | 3         | amy@email.local       |
 | 6        | 3         | afound@home.email     |
+| 7        | 4         | barnbarn@hops.local   |
 
 
 
@@ -355,17 +360,28 @@ Email Table
 </details>
 
 
-<details><summary>2NF - Company Tax Id is moved to company table</summary>
+<details><summary>2NF - Company Tax Id is moved to company table with a join table</summary>
 <p>
 
 Person Table
 
-| Person Id  |First name | Last Name | Full Name     |  company id |
-|------------|-----------|-----------|---------------|-------------|
-| 1          | John      | Mitchell  | John Mitchell |  1          | 
-| 2          | Steve     | Green     | Steve Green   |  2          |
-| 3          | Amy       | Found     | Amy Found     |  3          |
+| Person Id  |First name | Last Name | Full Name      | 
+|------------|-----------|-----------|----------------|
+| 1          | John      | Mitchell  | John Mitchell  |  
+| 2          | Steve     | Green     | Steve Green    |  
+| 3          | Amy       | Found     | Amy Found      |  
+| 4          | BarnBarn  | Rabbit    | BarnBarn Rabbit| 
 
+
+PersonCompany Table
+
+| Person Id | Comany Id |
+|-----------|-----------|
+| 1         | 1         | 
+| 2         | 2         | 
+| 3         | 3         | 
+| 4         | 1         | 
+| 4         | 2         | 
 
 
 Company Table
@@ -388,7 +404,7 @@ Email Table
 | 4        | 2         | steve@email.local     |
 | 5        | 3         | amy@email.local       |
 | 6        | 3         | afound@home.email     |
-
+| 7        | 4         | barnbarn@hops.local   |
 
 
 </p>
@@ -399,12 +415,23 @@ Email Table
 
 Person Table
 
-| Person Id  |First name | Last Name | company id |
-|------------|-----------|-----------|------------|
-| 1          | John      | Mitchell  | 1          | 
-| 2          | Steve     | Green     | 2          |
-| 3          | Amy       | Found     | 3          |
+| Person Id  |First name | Last Name |
+|------------|-----------|-----------|
+| 1          | John      | Mitchell  |
+| 2          | Steve     | Green     |
+| 3          | Amy       | Found     |
+| 4          | BarnBarn  | Rabbit    |
 
+
+PersonCompany Table
+
+| Person Id | Comany Id |
+|-----------|-----------|
+| 1         | 1         | 
+| 2         | 2         | 
+| 3         | 3         | 
+| 4         | 1         | 
+| 4         | 2         | 
 
 
 Company Table
@@ -427,6 +454,7 @@ Email Table
 | 4        | 2         | steve@email.local     |
 | 5        | 3         | amy@email.local       |
 | 6        | 3         | afound@home.email     |
+| 7        | 4         | barnbarn@hops.local   |
 
 
 </p>
