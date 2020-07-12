@@ -1771,7 +1771,7 @@ Data Table
 |---------------|-------------------|----------------|--------------|-------------|---------|--------------------|------------------|
 | BarnBarn      | His Hutch         | Window Dresser | AAA          | 99.99       | Carrot  | 1.00               | 5                |
 | BarnBarn      | His Hutch         | Window Dresser | AAA          | 99.99       | Apple   | 2.00               | 3                |
-| BarnBarn      | Her Hutch         | Window Dresser | AAA          | 99.99       | Hay     | 3.00               | 7                |
+| BarnBarn      | ***Her Hutch***         | Window Dresser | AAA          | 99.99       | Hay     | 3.00               | 7                |
 | Cinnamon      | Her Hutch         | Closet Dresser | BBB          | 99.99       | Carrot  | 1.00               | 2                |
 | Cinnamon      | Her Hutch         | Closet Dresser | BBB          | 99.99       | Apple   | 2.00               | 1                |
 | Cinnamon      | Her Hutch         | Closet Dresser | BBB          | 99.99       | Dress   | 5.00               | 3                |
@@ -1812,12 +1812,12 @@ Order Table
 
 Location Table
 
-| Location Id | Employee | Location       |
+| Location Id | Customer | Location       |
 |-------------|----------|----------------|
 | 1           | 1        | His Hutch      |
 | 2           | 1        | Window Dresser |
 | 3           | 2        | Her Hutch      |
-| 4           | 2        | Closet Dress   |
+| 4           | 2        | Closet Dresser |
 | 5           | 3        | Cat Tree       |
 
 </p>
@@ -1869,12 +1869,12 @@ Order Item Table
 
 Location Table
 
-| Location Id | Employee | Location       |
+| Location Id | Customer | Location       |
 |-------------|----------|----------------|
 | 1           | 1        | His Hutch      |
 | 2           | 1        | Window Dresser |
 | 3           | 2        | Her Hutch      |
-| 4           | 2        | Closet Dress   |
+| 4           | 2        | Closet Dresser |
 | 5           | 3        | Cat Tree       |
 
 </p>
@@ -1927,12 +1927,12 @@ Notice that in order 2, DRESS was ordered twice. These items orders are combined
 
 Location Table
 
-| Location Id | Employee | Location       |
+| Location Id | Customer | Location       |
 |-------------|----------|----------------|
 | 1           | 1        | His Hutch      |
 | 2           | 1        | Window Dresser |
 | 3           | 2        | Her Hutch      |
-| 4           | 2        | Closet Dress   |
+| 4           | 2        | Closet Dresser |
 | 5           | 3        | Cat Tree       |
 
 </p>
