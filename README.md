@@ -1662,7 +1662,7 @@ Create a single new customer
 
 ```SQL
 INSERT INTO customers(customer_id, company_name, contact_name)  
-VALUES (9191, 'Lambda School', 'John Mitchell')  
+VALUES (9191, 'BloomTech', 'John Mitchell')  
 ```
 
 <details><summary>results</summary>
